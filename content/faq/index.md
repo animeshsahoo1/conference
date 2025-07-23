@@ -41,6 +41,10 @@ The CFP is the official CFP of API Days Paris available [here](https://apidays.t
 
 Last but not least, selected speakers can opt-in for a 500$ travel stipend. This won't cover all the expenses but we hope to make everything much easier for them.
 
+## Accessibility Accommodations
+
+We are committed to making the conference inclusive and accessible to everyone—whether you're attending or speaking. If you are Deaf / Hard of Hearing, Blind / Visually Impaired, or have any other accessibility needs, we encourage you to reach out. To request accommodations or ask questions, please contact us at info@json-schema.org. The earlier we hear from you, the better we can ensure a supportive and accessible experience.
+
 ## Ticketing
 
 The tickets should be acquired using the standard [API Days ticketing system](https://ticket.apidays.global/event/apidays-paris-2024/f8f61349-4f78-4bba-a162-68d598833116/cart).
