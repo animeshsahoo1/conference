@@ -1,17 +1,16 @@
 baseURL = "/"
 relativeURLs = true
 languageCode = "en-us"
-title = "JSON Schema Conference 24"
+title = "JSON Schema Conference 2025 - Paris"
 
 # theme
 theme = "devfest-theme-hugo"
 
 # params
-
 [params]
     title = "JSON Schema Conference 25"
     date = "2025-12-09"  # update date 
-    description = "JSON Schema Conference website for 2025"
+    description = "Join us in Paris for JSON Schema Conference 2025 - December 9th at CNIT Forest"
     images = ["/images/"]
     email = "info@json-schema.org"
     keywords = "event, gdg, gde, devfest, google, programming, android, chrome, developers, web, cloud, androiddev"
@@ -32,11 +31,11 @@ theme = "devfest-theme-hugo"
 
 [menu]
 [[menu.main]]
-    identifier = "CFP"
-    name = "CFP"
-    url = "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx"
+    identifier = "apply-to-speak"
+    name = "Apply to Speak"
+    url = "#apply-to-speak"
     weight = 200
-    external = true
+    external = false
 
 [languages]
 [languages.en]
