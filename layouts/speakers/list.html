@@ -2,13 +2,47 @@
 
 {{ .Content }}
 
+<div class="apply-speaker">
+  <a href="{{ .Site.Params.cfpUrl }}" class="apply-button" target="_blank" rel="noopener">
+    Apply to be a Speaker
+  </a>
+</div>
+
 <section class="speakers-list">
-	<ul class="speakers shuffle">
-		{{ $speakers := where .Site.AllPages ".Section" "speakers" }}
-		{{ range where $speakers ".Kind" "page" }}
-		<li>{{ partial "speaker.html" . }}</li>
-		{{ end }}
-	</ul>
+  <ul class="speakers">
+    {{ $speakers := where .Site.Data.speakers "conferenceYear" 2024 }}
+    {{ range $speakers }}
+      <li>
+        {{ partial "speaker.html" . }}
+      </li>
+    {{ end }}
+  </ul>
 </section>
+
+<style>
+  .apply-speaker {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+.apply-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #0071BC;
+  color: #171717 !important; /* force black text, overrides global inherit */
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.apply-button:hover {
+  background-color: #005f9c;
+  color: #fff !important; 
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  transform: translateY(-2px) scale(1.03);
+}
+</style>
 
 {{ end }}
