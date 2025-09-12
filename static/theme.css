@@ -207,6 +207,85 @@ body {
   }
 }
 
+/* Location section container */
+section.location {
+  margin: 2rem auto;
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+/* Map container: iframe or bg-image variant */
+section.location .map-embed,
+section.location .map {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0,0,0,.12);
+  height: 420px; /* consistent height */
+}
+
+/* Make iframe fill container */
+section.location .map-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Description box alignment */
+section.location .description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .75rem;
+  margin-top: 1rem;
+}
+
+/* Address + direction button pill */
+section.location .direction {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: rgba(255,255,255,.95);
+  backdrop-filter: saturate(150%) blur(4px);
+  color: #0b2bd6; /* primary blue */
+  border: 1px solid rgba(11,43,214,.15);
+  border-radius: 999px;
+  padding: .5rem .75rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+  font-weight: 600;
+}
+
+/* Icon-only button inside pill */
+section.location .direction .btn.btn-icon-only {
+  background: #0b2bd6;
+  color: #fff;
+  border-color: transparent;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  min-width: 2.25rem;
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(11,43,214,.35);
+}
+
+section.location .direction .btn.btn-icon-only:hover {
+  transform: translateY(-1px);
+}
+
+/* Tighten top section spacing (hero to map) */
+.jumbo + .home-info,
+.home-info + section.location,
+.jumbo + section.location {
+  margin-top: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  section.location { padding: 0 .75rem; }
+  section.location .map-embed, section.location .map { height: 320px; }
+  section.location .direction { font-size: .9rem; }
+}
+
+
 
 h1,
 h2,
