@@ -58,7 +58,7 @@
 	--office-hours: #fffaf0;
 	--keynote: #afeeee;
 	--jumbo-logo-width: 800px;
-	--jumbo-overlay-opacity: 0.6;
+	--jumbo-overlay-opacity: 0.5;
 	--partner-support-height: 60px;
 	--partner-platinum-height: calc(var(--partner-support-height)*3);
 	--partner-gold-height: calc(var(--partner-support-height)*2);
@@ -112,6 +112,101 @@ body {
 	min-height: calc(100vh - 3.25rem);
 	min-height: calc(100vh - var(--toolbar-height))
 }
+
+
+.cta-row {
+  display: flex;
+  gap: 2rem; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+	margin-top: 1rem;
+}
+.countdown-container {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: var(--primary); 
+}
+
+.countdown-header h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+.countdown-header h5 {
+  font-size: 1.2rem;
+  color: var(--primary); 
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0; 
+  flex-wrap: wrap;
+}
+
+.countdown-item {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  min-width: 80px;
+}
+
+.countdown-item span {
+  display: block;
+  font-size: 1.5rem; 
+  font-weight: bold;
+  color: var(--primary); 
+  line-height: 1; 
+}
+
+.countdown-item label {
+  display: block;
+  font-size: 0.75rem; 
+  text-transform: uppercase;
+  margin-top: 0.25rem; 
+  opacity: 0.8;
+}
+
+.countdown-timer {
+  max-height: 80px; 
+}
+
+.countdown-item {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+  .countdown-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .countdown-timer {
+    gap: 1rem;
+  }
+  
+  .countdown-item {
+    min-width: 70px;
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .countdown-item span {
+    font-size: 1.5rem;
+  }
+}
+
 
 h1,
 h2,
@@ -567,9 +662,10 @@ span.btn {
 	color: inherit;
 	text-transform: uppercase;
 	text-decoration: none;
-	font-size: 1rem;
-	font-weight: 200;
+	font-size: 1.35rem;
+	font-weight: 500;
 	cursor: pointer;
+	border-radius: 0.4rem; 
 	text-shadow: 1px 0 0 rgba(255, 255, 255, .5);
 	text-shadow: var(--extruded-light);
 	--focus-color: var(--darken-1);
@@ -654,6 +750,37 @@ span.btn:hover {
 	background-image: linear-gradient(90deg, var(--focus-color), var(--focus-color));
 	text-decoration: none
 }
+a.btn:hover,
+button:hover,
+input[type=button]:hover,
+input[type=reset]:hover,
+input[type=submit]:hover,
+span.btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 44, 196, 0.3);
+	transition: all 0.3s ease;
+}
+
+a.btn,
+button,
+input[type=button],
+input[type=reset],
+input[type=submit],
+span.btn {
+	transition: all 0.3s ease;
+}
+
+a.btn.primary:hover,
+button.primary:hover,
+input[type=button].primary:hover,
+input[type=reset].primary:hover,
+input[type=submit].primary:hover,
+span.btn.primary:hover {
+	background-color: #3b64e9; 
+	transform: translateY(-2px);
+	box-shadow: 0 6px 16px rgba(0, 44, 196, 0.4);
+}
+
 
 a.btn .icon,
 button .icon,
@@ -746,12 +873,6 @@ body > footer .footer-header .follow #twitter:hover{
 body > footer .footer-header .follow #slack:hover{
 	color: #89D3DF !important;
 }
-
-
-
-
-
-
 
 .jumbo {
 	position: relative;
