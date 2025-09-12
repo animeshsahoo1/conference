@@ -54,6 +54,15 @@ of the JSON Schema Ecosystem to further the education, adoption and evolution of
     link2="https://www.youtube.com/watch?v=wJ7bK22n3IU"
 >}}
 
+{{< tickets
+    title="Add Tickets"
+    subtitle="Join JSON Schema Conference — limited seats available."
+    href="https://ticket.apidays.global/event/apidays-paris-2025/3cccd07f-acb2-466e-8d91-cb1f208ecf42?_gl=1*1i6mx1e*_gcl_au*MTY3OTY0ODcyNS4xNzUwMTA0MzA4"
+    label="Buy on apidays"
+    
+>}}
+
+
 
 {{% partners categories="platinum" %}}
 
