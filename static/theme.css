@@ -309,7 +309,7 @@ section.location .direction .btn.btn-icon-only:hover {
 }
 
 .home-section {
-  margin: 2.5rem auto;
+  margin: 1.5rem auto;
   padding: 0 1rem;
 }
 .home-section .section-header {
@@ -380,6 +380,48 @@ section.location .direction .btn.btn-icon-only:hover {
   .home-section .section-header h2 {
     font-size: 1.4rem;          
   }
+}
+
+.tickets-title { 
+	text-align: center;
+	margin: 1rem auto .5rem; 
+	padding: 0 1rem; 
+	max-width: 1200px; 
+}
+.tickets-title h2 { 
+	margin: 0; 
+	font-size: 1.7rem; 
+}
+.tickets-subtitle { 
+	margin: .5rem 0 0; 
+	color: rgba(0,0,0,.75); 
+}
+
+.tickets-cta { 
+	display: flex; 
+	gap: .9rem; 
+	justify-content: center; 
+	margin: 1rem 0 0; 
+	flex-wrap: wrap; 
+}
+
+
+.tickets .btn:focus-visible {
+  outline: 3px solid rgba(11,43,214,.55);
+  outline-offset: 2px;
+}
+
+.tickets .btn.primary {
+  background-color:#002cc4;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .tickets .btn { transition: none; }
+}
+
+@media (max-width: 768px) {
+  .tickets-title h2 { font-size: 1.4rem; }
 }
 
 
