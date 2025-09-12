@@ -285,6 +285,102 @@ section.location .direction .btn.btn-icon-only:hover {
   section.location .direction { font-size: .9rem; }
 }
 
+.home .past-sessions-title,
+.past-sessions-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;        
+  gap: .75rem;
+  margin: 2rem auto 1rem;
+  padding: 0 1rem;
+  max-width: 1200px;
+  text-align: center;             
+}
+
+.past-sessions-title h2 {
+  margin: 0;
+  font-size: 1.7rem;              
+  letter-spacing: .2px;
+  line-height: 1.25;
+}
+
+.past-sessions-title .rule {
+  display: none;                  
+}
+
+.home-section {
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+.home-section .section-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.home-section .section-header h2 {
+  margin: 0;
+  font-size: 2rem;
+	font-weight: 500;
+}
+
+.past-sessions {
+  max-width: 100%;
+  margin: 0 auto 2.5rem;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+
+.past-sessions .session-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.past-sessions .session-card h4 {
+  margin: 0 0 .5rem;
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+
+.past-sessions .session-card a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.past-sessions .session-card p {
+  margin: 0;
+  color: rgba(0,0,0,.7);
+  font-size: .95rem;
+}
+
+.past-sessions .session-card:hover,
+.past-sessions .session-card:focus-within {
+  transform: translateY(-2px);
+  border-color: rgba(11,43,214,.25);
+  box-shadow: 0 16px 36px rgba(11,43,214,.12);
+}
+
+.past-sessions .session-card a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .past-sessions {
+    gap: 1rem;
+  }
+  .past-sessions .session-card {
+    padding: .9rem 1rem;
+  }
+  .past-sessions-title h2,
+  .home-section .section-header h2 {
+    font-size: 1.4rem;          
+  }
+}
 
 
 h1,

@@ -1,0 +1,37 @@
+<section class="home-section">
+  <header class="section-header past-sessions-title">
+    <h2>{{ with .Get "title" }}{{ . }}{{ else }}Past Sessions{{ end }}</h2>
+  </header>
+
+  <div class="past-sessions">
+    <article class="session-card">
+      <h4>
+        <a href="{{ .Get "link1" }}" target="_blank" rel="noopener">
+          {{ .Get "title1" }}
+        </a>
+      </h4>
+      <p>
+        {{ with .Get "desc1" }}
+          {{ . }}
+        {{ else }}
+          Watch the recorded session from the JSON Schema Conference.
+        {{ end }}
+      </p>
+    </article>
+
+    <article class="session-card">
+      <h4>
+        <a href="{{ .Get "link2" }}" target="_blank" rel="noopener">
+          {{ .Get "title2" }}
+        </a>
+      </h4>
+      <p>
+        {{ with .Get "desc2" }}
+          {{ . }}
+        {{ else }}
+          Catch up on highlights and insights from our past conference.
+        {{ end }}
+      </p>
+    </article>
+  </div>
+</section>
