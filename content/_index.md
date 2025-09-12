@@ -3,11 +3,28 @@ title: JSON Schema Conference 2025
 draft: false
 ---
 
-{{% jumbo img="/images/backgrounds/back-00.jpg" imgLabel="JSON Schema Conference 2025" %}}
-
-## December 9th, 2025
+{{% jumbo img="/images/backgrounds/backgroundimage2025.jpg" imgLabel="JSON Schema Conference 2025" %}}
 
 ### JSON Schema Conference | CNIT Forest Paris - France
+
+## December 11th, 2025
+
+<div class=".cta-row">
+{{< button-link label="Apply to Speak"
+              url="https://forms.gle/zaVhgqdPvja38rVw6" >}}
+
+{{< button-link label="Become a Sponsor" 
+              url="https://opencollective.com/json-schema/events/the-json-schema-conference-2025-f7f367ce" >}}
+
+{{< button-link label="Meet Speakers"
+              url="./speakers" >}}
+
+{{< button-link label="Get Tickets"
+              url="#get-tickets" >}}
+
+</div>
+
+{{< countdown >}}
 
 {{% /jumbo %}}
 
@@ -20,29 +37,6 @@ of the JSON Schema Ecosystem to further the education, adoption and evolution of
 
 {{% /home-info %}}
 
-{{% home-speakers %}}
-## Featured Speakers
-
-{{< button-link label="meet speakers"
-                url="./speakers"
-                icon="right" >}}
-
-{{< button-link label="Apply to Speak"
-                  url="#apply-to-speak" >}}
-  
-{{< button-link label="Become a Sponsor" 
-                  url="/partners" >}}
-  
-{{< button-link label="Get Tickets"
-                  url="#get-tickets" >}}
-
-## About the Event
-
-The JSON Schema Conference is the premier event bringing together developers, architects, and enthusiasts to explore the latest advances in JSON Schema technology. Held in Paris at CNIT Forest on December 9th, 2025, it's a unique opportunity to learn, network, and grow within the community.
-
-{{% /home-speakers %}}
-
-
 {{% home-location
     image="/images/map7.png"
     address="CNIT Forest Paris - France"
@@ -50,6 +44,16 @@ The JSON Schema Conference is the premier event bringing together developers, ar
     longitude="2.240017" %}}
 
 {{% /home-location %}}
+
+
+{{< past-sessions
+    title="Past Sessions"
+    title1="JSON Schema Conference 2024 - The state of JSON schema"
+    link1="https://www.youtube.com/watch?v=V52QoBTKMhQ"
+    title2="JSON Schema Conference 2024 - Applying software engineering practices to JSON Schemas"
+    link2="https://www.youtube.com/watch?v=wJ7bK22n3IU"
+>}}
+
 
 {{% partners categories="platinum" %}}
 
