@@ -68,9 +68,13 @@ of the JSON Schema Ecosystem to further the education, adoption and evolution of
 
 ## Sponsors
 
-<center>
-{{< button-link label="Become a Sponsor"
-                url="faq/#how-to-become-a-sponsorpartner">}}
-</center>
+<div class="tickets-cta">
+  <a class="btn primary"
+     href="https://opencollective.com/json-schema"
+     target="_blank"
+     rel="noopener noreferrer">
+     Become a Sponsor
+  </a>
+</div>
 
 {{% /partners %}}
