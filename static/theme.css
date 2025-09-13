@@ -424,6 +424,46 @@ section.location .direction .btn.btn-icon-only:hover {
   .tickets-title h2 { font-size: 1.4rem; }
 }
 
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.sponsor-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.sponsor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.sponsor-logo {
+  height: 80px;
+  width: auto;
+  margin-bottom: 0.5rem;
+  object-fit: contain;
+}
+
+.sponsor-name {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #002cc4;
+}
+
+.sponsor-description {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
 
 h1,
 h2,

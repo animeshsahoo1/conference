@@ -78,3 +78,5 @@ of the JSON Schema Ecosystem to further the education, adoption and evolution of
 </div>
 
 {{% /partners %}}
+
+{{< sponsors-list >}}

@@ -1,4 +1,57 @@
-en:
-  why: "Why be a partner of JSON Schema Conf?"
-  socials: "Find them via:"
-  jobs: "They are recruiting, take the opportunity:"
+bronze:
+  - name: AsyncAPI
+    homepage_url: https://www.asyncapi.com/
+    logo: asyncapi.svg
+    description: The AsyncAPI Initiative is a specification and growing set of open-source tools to help developers define, build, and maintain asynchronous APIs and EDAs.
+  - name: Airbnb
+    homepage_url: http://www.airbnb.com/
+    logo: airbnb.svg
+    description: Airbnb is an online community marketplace for people to list, discover, and book accommodations through mobile phones or the internet.
+  - name: Postman
+    homepage_url: https://postman.com
+    logo: postman.svg
+    description: Postman is a collaboration platform for API development.
+  - name: Endjin
+    homepage_url: https://endjin.com/
+    logo: endjin.svg
+    description: Endjin is a consultancy that designs a data platform to monitor the oceans.
+  - name: LLC.org
+    homepage_url: https://www.llc.org/
+    logo: llc.svg
+    description: Step-by-step guides for launching an LLC.
+  - name: VPS Server
+    homepage_url: https://www.vpsserver.com/
+    logo: vps-server.svg
+    description: Providing virtual private servers (VPS).
+  - name: IT Flash Cards
+    homepage_url: https://www.itflashcards.com/
+    logo: itflashcards.svg
+    description: IT Flashcards empowers programmers and IT specialists.
+  - name: Route4Me
+    homepage_url: https://www.route4me.com/
+    logo: route4me.svg
+    description: Plan & optimize delivery routes.
+  - name: n8n
+    homepage_url: https://n8n.io/
+    logo: n8n.svg
+    description: n8n is an extendable workflow automation tool.
+  - name: Copy Copter
+    homepage_url: https://copycopter.ai/
+    logo: copycopter.png
+    description: Create AI videos in minutes with Copy Copter.
+  - name: Octue
+    homepage_url: https://www.octue.com/
+    logo: octue.svg
+    description: Octue helps scientists and engineers in energy and climate sectors work with data.
+  - name: Apideck
+    homepage_url: https://www.apideck.com/
+    logo: apideck.webp
+    description: Apideck is the leading Unified API.
+  - name: RxDB
+    homepage_url: https://rxdb.info/
+    logo: rxdb.svg
+    description: RxDB is a reactive database for JS apps.
+  - name: Web Design Agencies
+    homepage_url: https://topagency.webflow.io/
+    logo: wda.svg
+    description: Platform for web design company listings.
