@@ -62,21 +62,16 @@ of the JSON Schema Ecosystem to further the education, adoption and evolution of
     
 >}}
 
+{{< sponsors-cta >}}
 
-
+{{< sponsors-list >}}
+<!-- 
 {{% partners categories="platinum" %}}
-
-## Sponsors
-
-<div class="tickets-cta">
-  <a class="btn primary"
-     href="https://opencollective.com/json-schema"
-     target="_blank"
-     rel="noopener noreferrer">
-     Become a Sponsor
-  </a>
-</div>
 
 {{% /partners %}}
 
-{{< sponsors-list >}}
+{{% partners categories="bronze" %}}
+
+{{% /partners %}}
+
+{{< sponsors-list >}} -->

@@ -429,6 +429,7 @@ section.location .direction .btn.btn-icon-only:hover {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
   padding: 2rem;
+	justify-content: center;
 }
 
 .sponsor-card {
@@ -463,7 +464,11 @@ section.location .direction .btn.btn-icon-only:hover {
   color: #555;
   line-height: 1.4;
 }
-
+.sponsors-grid:only-child,
+.sponsors-grid:has(.sponsor-card:only-child) {
+  max-width: 300px; 
+  margin: 0 auto;
+}
 
 h1,
 h2,

@@ -1,3 +1,9 @@
+platinum:
+  - name: Octue
+    homepage_url: https://www.octue.com/
+    logo: octue.svg
+    description: Octue helps scientists and engineers in energy and climate sectors work with data.
+
 bronze:
   - name: AsyncAPI
     homepage_url: https://www.asyncapi.com/
@@ -39,10 +45,6 @@ bronze:
     homepage_url: https://copycopter.ai/
     logo: copycopter.png
     description: Create AI videos in minutes with Copy Copter.
-  - name: Octue
-    homepage_url: https://www.octue.com/
-    logo: octue.svg
-    description: Octue helps scientists and engineers in energy and climate sectors work with data.
   - name: Apideck
     homepage_url: https://www.apideck.com/
     logo: apideck.webp
