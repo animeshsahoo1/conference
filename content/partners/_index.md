@@ -27,7 +27,6 @@ draft: false
   <p>We extend our gratitude to the sponsors who supported JSON Schema Conference 2024.</p>
 </div>
 
-{{< sponsors-cta >}}
-
-{{< sponsors-list >}}
+{{% partners categories="platinum" %}}
+{{% /partners %}}
 

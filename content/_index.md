@@ -3,13 +3,15 @@ title: JSON Schema Conference 2025
 draft: false
 ---
 
-{{% jumbo img="/images/backgrounds/backgroundimage2025.jpg" imgLabel="JSON Schema Conference 2025" %}}
+{{% jumbo img="/images/conferences/2024/1000004748.jpg" imgLabel="JSON Schema Conference 2025" %}}
 
 ### JSON Schema Conference | CNIT Forest Paris - France
 
 ## December 11th, 2025
 
-<div class=".cta-row">
+{{< countdown >}}
+
+<div class="cta-row">
 {{< button-link label="Apply to Speak"
               url="https://forms.gle/zaVhgqdPvja38rVw6" >}}
 
@@ -24,7 +26,6 @@ draft: false
 
 </div>
 
-{{< countdown >}}
 
 {{% /jumbo %}}
 
@@ -46,32 +47,10 @@ of the JSON Schema Ecosystem to further the education, adoption and evolution of
 {{% /home-location %}}
 
 
-{{< past-sessions
-    title="Past Sessions"
-    title1="JSON Schema Conference 2024 - The state of JSON schema"
-    link1="https://www.youtube.com/watch?v=V52QoBTKMhQ"
-    title2="JSON Schema Conference 2024 - Applying software engineering practices to JSON Schemas"
-    link2="https://www.youtube.com/watch?v=wJ7bK22n3IU"
->}}
+{{< past-sessions title="Past Sessions" >}}
 
-{{< tickets
-    title="Add Tickets"
-    subtitle="Join JSON Schema Conference — limited seats available."
-    href="https://ticket.apidays.global/event/apidays-paris-2025/3cccd07f-acb2-466e-8d91-cb1f208ecf42?_gl=1*1i6mx1e*_gcl_au*MTY3OTY0ODcyNS4xNzUwMTA0MzA4"
-    label="Buy on apidays"
-    
->}}
+{{< tickets >}}
 
 {{< sponsors-cta >}}
 
 {{< sponsors-list >}}
-<!-- 
-{{% partners categories="platinum" %}}
-
-{{% /partners %}}
-
-{{% partners categories="bronze" %}}
-
-{{% /partners %}}
-
-{{< sponsors-list >}} -->

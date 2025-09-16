@@ -1,19 +1,20 @@
 <section class="home-section tickets" style="padding:0 0 4rem 0;">
-  <header class="section-header tickets-title">
-    <h2>{{ with .Get "title" }}{{ . }}{{ else }}Tickets{{ end }}</h2>
-    {{ with (.Get "subtitle") }}
-      <h3 class="tickets-subtitle">{{ . }}</h3>
-    {{ end }}
-  </header>
 
-  <div class="tickets-cta">
-    <a class="btn primary"
-       href="{{ .Get "href" }}"
-       target="_blank"
-       rel="noopener">
-       {{ with (.Get "label") }}{{ . }}{{ else }}Buy Tickets{{ end }}
-    </a>
+  <h1 class="section-header tickets-title">{{ with .Get "title" }}{{ . }}{{ else }}Tickets{{ end }}
+  </h1>
+  <div class="tickets-info-section">
+    <div class="tickets-info-content">
+      <h6 class="tickets-description">
+        "Be part of the JSON Schema Conference — connect with the community, learn from experts, and gain skills you can apply right away."
+      </h6>
+      <div class="tickets-main-cta">
+        <a class="btn primary ticket-main-btn" 
+           href="{{ .Get "href" }}" 
+           target="_blank" 
+           rel="noopener noreferrer">
+          Get Your Ticket Now →
+        </a>
+      </div>
+    </div>
   </div>
-
-  
 </section>

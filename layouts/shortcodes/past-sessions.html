@@ -1,37 +1,38 @@
-<section class="home-section" style="padding:2rem 0;">
-  <header class="section-header past-sessions-title">
-    <h2>{{ with .Get "title" }}{{ . }}{{ else }}Past Sessions{{ end }}</h2>
-  </header>
-
-  <div class="past-sessions">
-    <article class="session-card">
-      <h4>
-        <a href="{{ .Get "link1" }}" target="_blank" rel="noopener">
-          {{ .Get "title1" }}
-        </a>
-      </h4>
-      <p>
-        {{ with .Get "desc1" }}
-          {{ . }}
-        {{ else }}
-          Watch the recorded session from the JSON Schema Conference.
-        {{ end }}
-      </p>
+<section class="home-section past-sessions-section">
+  <h1 class="section-header tickets-title">{{ with .Get "title" }}{{ . }}{{ else }}Past Sessions{{ end }}</h1>
+  <div class="past-sessions-horizontal">
+    <article class="video-card">
+      <div class="video-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/V52QoBTKMhQ" 
+          title="JSON Schema Conference 2024 - The state of JSON schema" 
+          frameborder="0" 
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="video-content">
+        <h3>JSON Schema Conference 2024 - The state of JSON schema</h3>
+        <p>Watch the recorded session from the JSON Schema Conference.</p>
+      </div>
     </article>
 
-    <article class="session-card">
-      <h4>
-        <a href="{{ .Get "link2" }}" target="_blank" rel="noopener">
-          {{ .Get "title2" }}
-        </a>
-      </h4>
-      <p>
-        {{ with .Get "desc2" }}
-          {{ . }}
-        {{ else }}
-          Catch up on highlights and insights from our past conference.
-        {{ end }}
-      </p>
+    <article class="video-card">
+      <div class="video-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/wJ7bK22n3IU" 
+          title="JSON Schema Conference 2024 - Applying software engineering practices to JSON Schemas" 
+          frameborder="0" 
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="video-content">
+        <h3>JSON Schema Conference 2024 - Applying software engineering practices to JSON Schemas</h3>
+        <p>Catch up on highlights and insights from our past conference.</p>
+      </div>
     </article>
   </div>
 </section>
