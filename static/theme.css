@@ -530,7 +530,7 @@ section.location .direction .btn.btn-icon-only:hover {
 .tickets-info-section {
   background: linear-gradient(135deg, #f1f3f8 0%, #e8ecf2 100%);
   margin: 2rem 0 0 0;
-  padding: 3rem 0;
+  padding: 3rem 3rem;
   border-radius: 12px;
 }
 
@@ -542,7 +542,7 @@ section.location .direction .btn.btn-icon-only:hover {
 }
 
 .tickets-description {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #1a202c;
   line-height: 1.6;
