@@ -7,7 +7,14 @@ draft: false
 
 ### JSON Schema Conference | CNIT Forest Paris - France
 
-## December 11th, 2025
+<h2 style="display: flex; justify-content: center; align-items: center; margin: 0; padding: 0; margin:8px 0;">December 11th, 2025</h2>
+
+<div class="scroll-icon-positioned" aria-hidden="true">
+  <svg class="icon icon-scroll-down">
+    <use xlink:href="#scroll-down"></use>
+  </svg>
+</div>
+
 
 {{< countdown >}}
 
@@ -22,7 +29,7 @@ draft: false
               url="./speakers" >}}
 
 {{< button-link label="Get Tickets"
-              url="#get-tickets" >}}
+              url="https://ticket.apidays.global/event/apidays-paris-2025/3cccd07f-acb2-466e-8d91-cb1f208ecf42?_gl=1*1i6mx1e*_gcl_au*MTY3OTY0ODcyNS4xNzUwMTA0MzA4" >}}
 
 </div>
 
@@ -38,14 +45,12 @@ of the JSON Schema Ecosystem to further the education, adoption and evolution of
 
 {{% /home-info %}}
 
-{{% home-location
-    image="/images/map7.png"
+{{< home-location
     address="CNIT Forest Paris - France"
     latitude="48.892848"
-    longitude="2.240017" %}}
+    longitude="2.240017" >}}
 
-{{% /home-location %}}
-
+{{< /home-location >}}
 
 {{< past-sessions title="Past Sessions" >}}
 
