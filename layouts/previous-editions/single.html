@@ -12,7 +12,7 @@
             <div class="edition-description">
                 {{ .Content }}
             </div>
-            <h1>Picture Highlights</h1>
+            <h1>{{.Params.year}} Picture Highlights</h1>
 
             {{ $year := .Params.year }}
             {{ $path := printf "images/conferences/%d" $year }}
@@ -309,21 +309,39 @@
 document.addEventListener("DOMContentLoaded", () => {
   let slides = document.querySelectorAll(".conference-slider .slide");
   let current = 0;
-  
+  let interval; 
+
   function showSlide(i) {
     slides.forEach(s => s.classList.remove("active"));
     slides[i].classList.add("active");
   }
-  document.querySelector(".next").onclick = () => {
+
+  function nextSlide() {
     current = (current + 1) % slides.length;
     showSlide(current);
-  };
-  document.querySelector(".prev").onclick = () => {
+  }
+
+  function prevSlide() {
     current = (current - 1 + slides.length) % slides.length;
     showSlide(current);
+  }
+
+  function resetTimer() {
+    clearInterval(interval);
+    interval = setInterval(nextSlide, 2000); 
+  }
+
+  document.querySelector(".next").onclick = () => {
+    nextSlide();
+    resetTimer();
   };
 
-  // Modal functionality
+  document.querySelector(".prev").onclick = () => {
+    prevSlide();
+    resetTimer();
+  };
+
+ 
   let modal = document.getElementById("imageModal");
   let modalImg = document.getElementById("expandedImg");
   let close = document.querySelector(".close");
@@ -334,11 +352,13 @@ document.addEventListener("DOMContentLoaded", () => {
       modalImg.src = e.target.src;
     };
   });
-  close.onclick = () => modal.style.display = "none";
-  modal.onclick = (e) => { if(e.target === modal) modal.style.display = "none"; };
 
+  close.onclick = () => modal.style.display = "none";
+  modal.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
   showSlide(current);
+  resetTimer(); // start auto sliding
 });
+
 </script>
 
 {{ end }} 

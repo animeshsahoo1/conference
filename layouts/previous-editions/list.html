@@ -1,8 +1,12 @@
 {{ define "main" }}
 
+<div class="hero">
+	<h1 class="heading">JSON Schema Conference: Previous Editions</h1>
+</div>
+
 <section class="previous-editions-page">
     <div class="previous-editions-container">
-        {{ .Content }}
+       <h2>Explore past editions of the JSON Schema Conference and revisit presentations, resources, and highlights from previous years.</h2>
 
         <div class="editions-grid">
             {{ range sort .Pages ".Params.year" "desc" }}
@@ -13,6 +17,24 @@
                         <div class="edition-date">{{ .Params.date.Format "January 2, 2006" }}</div>
                         <div class="edition-location">{{ .Params.location }}</div>
                         <div class="edition-description">{{ .Params.summary | truncate 120 }}</div>
+
+                        {{ $path := printf "images/conferences/%d" .Params.year }}
+                        {{ $fullpath := printf "static/%s" $path }}
+
+                        {{ if (fileExists $fullpath) }}
+                        <div class="conference-slider auto-slider">
+                        <div class="slider-track">
+                            {{ range readDir $fullpath }}
+                            <div class="slide">
+                            <img src="/{{ $path }}/{{ .Name }}" alt="Conference photo">
+                            </div>
+                            {{ end }}
+                        </div>
+                        </div>
+                        {{ else }}
+                        <p>No images available for {{ .Params.year }}.</p>
+                        {{ end }}
+
                         <div class="edition-button">View Edition</div>
                     </a>
                 </div>
@@ -36,8 +58,8 @@
     
     .previous-editions-container {
         width: 100%;
-        max-width: 1200px;
-        padding: 2rem;
+        max-width: 1100px;
+        padding: 1rem;
         margin: 0 auto;
         box-sizing: border-box;
     }
@@ -63,13 +85,11 @@
         box-sizing: border-box;
         justify-content: center;
     }
-    
     @media (max-width: 480px) {
         .editions-grid {
             grid-template-columns: 1fr;
         }
     }
-    
     .edition-card {
         background-color: #fff;
         border-radius: 10px;
@@ -105,7 +125,6 @@
         color: inherit;
         text-decoration: none;
     }
-    
     .edition-year {
         display: inline-block;
         background-color: #0071BC;
@@ -153,6 +172,78 @@
         background-color: #005a9e;
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
+
+    .conference-slider {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .conference-slider .slider-track {
+        display: flex;
+        gap: 10px;
+    }
+
+    .conference-slider .slide {
+        flex-shrink: 0;          
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .conference-slider .slide img {
+        height: 150px;            
+        width: auto;              
+        object-fit: contain;
+        display: block;
+        border-radius: 6px;
+    }
+
+
+
 </style>
+
+<script>
+   document.addEventListener("DOMContentLoaded", () => {
+    const sliders = document.querySelectorAll(".conference-slider");
+
+    sliders.forEach(slider => {
+        const track = slider.querySelector(".slider-track");
+        const slides = Array.from(slider.querySelectorAll(".slide"));
+
+        // Duplicate slides for seamless loop
+        slides.forEach(s => {
+        const clone = s.cloneNode(true);
+        track.appendChild(clone);
+        });
+
+        let scrollAmount = 0;
+        const speed = 1; 
+        let paused = false;
+
+        
+        slider.addEventListener("mouseenter", () => paused = true);
+        slider.addEventListener("mouseleave", () => paused = false);
+
+        function step() {
+        if (!paused) {
+            scrollAmount += speed;
+
+            //reset scroll when first half (original slides) fully scrolled
+            const firstHalfWidth = slides.reduce((sum, s) => sum + s.offsetWidth + 10, 0);
+            if (scrollAmount >= firstHalfWidth) scrollAmount = 0;
+
+            track.style.transform = `translateX(-${scrollAmount}px)`;
+        }
+        requestAnimationFrame(step);
+        }
+
+        step();
+    });
+ });
+
+
+</script>
 
 {{ end }} 

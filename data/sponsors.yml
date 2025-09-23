@@ -1,0 +1,66 @@
+bronze:
+  items:
+    - name: AsyncAPI
+      homepage_url: https://www.asyncapi.com/
+      logo: asyncapi.svg
+
+    - name: Airbnb
+      homepage_url: http://www.airbnb.com/
+      logo: airbnb.svg
+
+    - name: Postman
+      homepage_url: https://postman.com
+      logo: postman.svg
+
+    - name: Endjin
+      homepage_url: https://endjin.com/
+      logo: endjin.svg
+
+    - name: LLC.org
+      homepage_url: https://www.llc.org/
+      logo: llc.svg
+
+    - name: VPS Server
+      homepage_url: https://www.vpsserver.com/
+      logo: vps-server.svg
+
+    - name: IT Flash Cards
+      homepage_url: https://www.itflashcards.com/
+      logo: itflashcards.svg
+
+    - name: Route4Me
+      homepage_url: https://www.route4me.com/
+      logo: route4me.svg
+
+    - name: n8n
+      homepage_url: https://n8n.io/
+      logo: n8n.svg
+
+    - name: Copy Copter
+      homepage_url: https://copycopter.ai/
+      logo: copycopter.png
+
+    - name: Octue
+      homepage_url: https://www.octue.com/
+      logo: octue.svg
+
+    - name: Apideck
+      homepage_url: https://www.apideck.com/
+      logo: apideck.webp
+
+    - name: RxDB
+      homepage_url: https://rxdb.info/
+      logo: rxdb.svg
+
+    - name: Web Design Agencies
+      homepage_url: https://topagency.webflow.io/
+      logo: wda.svg
+
+gold:
+  items:
+    
+
+platinum:
+  items:
+    
+
