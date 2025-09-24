@@ -4,7 +4,6 @@
     <div class="tier-price">{{ .price }}</div>
     <p class="tier-description">{{ .description | truncate 150 }}</p>
   </div>
-  <a href="{{ .contributeURL }}" class="tier-button" target="_blank" rel="noopener">Contribute</a>
 </div>
 
 <style>
@@ -21,7 +20,7 @@
 /* Sponsor Tier Card */
 .sponsor-tier {
   width: 280px;            /* fixed card width */
-  min-height: 300px;       /* optional: make them consistent in height */
+  min-height: 200px;       /* optional: make them consistent in height */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -91,16 +90,6 @@
   text-decoration: none;
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-.tier-button:hover {
-  background-color: #005fa3;
-  transform: translateY(-2px);
-}
-/* after click on contribute make sure it dont change colors which is default behaviour  */
-.tier-button:visited {
-  color: #fff;
-  background-color: #0071BC;
 }
 
 @keyframes fadeUp {

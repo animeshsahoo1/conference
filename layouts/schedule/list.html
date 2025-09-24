@@ -5,8 +5,8 @@
 
     {{ with (index (where $.Site.Data.rooms "key" "main") 0) }}
         <header class="schedule-header">
-            <h1>{{ .label }}</h1>
-            <p><b>{{ .description }}</b></p>
+            <h3><b>{{ .label }}</b></h3>
+            <h3>{{ .description }}</h3>
         </header>
     {{ end }}
 
@@ -19,13 +19,13 @@
             {{ with (index (where $.Site.Data.slots "key" $slotRef.slot) 0) }}
                 {{ $slotData := . }}
                 <div class="timeslot">
-                    <div class="time-marker">{{ $slotData.start }}</div>
+                    <div class="time-marker">{{ $slotData.start }} - {{$slotData.end}}</div>
                     <div class="sessions-grid">
-                        
+
                         {{ range $index, $room := $day.rooms }}
                             {{ with (index (where $room.slots "slot" $slotData.key) 0) }}
                                 {{ $sessionRef := . }}
-                                
+
                                 {{ with (index (where $.Site.AllPages "Params.key" $sessionRef.talk) 0) }}
                                     {{ $sessionPage := . }}
                                     {{ $roomData := index (where $.Site.Data.rooms "key" $room.room) 0 }}
@@ -58,7 +58,7 @@
         --accent-color: #3498db; /* Blue */
     }
     html {
-        scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+        scroll-behavior: smooth;
     }
     body {
         font-family: var(--primary-font);
@@ -112,7 +112,10 @@
     }
     .day-block {
         margin-bottom: 4rem;
-        padding-top: 2rem; /* Add padding for sticky nav clearance */
+        padding-top: 2rem;
+    }
+    .day-block::before{
+        display: none; /* Removed extra space before at start overriding theme.css */
     }
     .day-title {
         font-size: 2.5rem;
@@ -122,37 +125,25 @@
         padding-bottom: 1rem;
         margin-bottom: 2rem;
     }
-    .timeslot {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        margin-bottom: 2rem;
-        padding-top: 1rem;
-        position: relative;
-    }
-    .timeslot:not(:last-child)::before {
-		content: '';
-		position: absolute;
-		left: 20px;
-		margin: 5px; 
-		top: 2.5rem; /* Starts the line below the time text */
-		width: 3px;
-		height: calc(100% - 1rem);
-		background-color: var(--border-color);
-	}
+
     .time-marker {
-        flex: 0 0 120px;
+        /* Style the time as a full-width header for the slot */
         font-size: 1.5rem;
         font-weight: 600;
         color: var(--time-color);
-    }
-    .sessions-grid {
-        flex: 1 1 auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
-        gap: 1.5rem;
+        width: 90%;
+        margin-bottom: 1.5rem; /* Space between time and session cards */
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--border-color); /* Add a separator line */
     }
 
+    .day-block {
+        display: grid;
+        /* Create a 2-column grid that flows left-to-right, then wraps */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        width: 100%;
+    }
     .session-room {
         font-size: 1rem;
         font-weight: 500;
@@ -179,7 +170,6 @@
     }
 
 	@media (max-width: 768px) {
-        /* --- Typography Adjustments --- */
         .schedule-header h1 {
             font-size: 2.2rem;
         }
@@ -187,39 +177,16 @@
             font-size: 1.8rem;
         }
 
-        /* --- Main Timeline Layout --- */
-        .timeslot {
-            flex-direction: column; /* Stack time and sessions vertically */
-            align-items: flex-start;
-            padding-top: 0;
+        /* On mobile, switch to a single-column layout for sessions */
+        .day-block {
+            grid-template-columns: 1fr;
         }
 
-        /* --- Hide the connecting line on mobile --- */
-        .timeslot:not(:last-child)::before {
-            display: none;
-        }
-
-        /* --- Adjust the Time Marker for mobile --- */
-        .time-marker {
-            flex-basis: auto; /* Remove the fixed width */
-            width: 100%;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--border-color); /* Add a separator */
-        }
-
-        /* --- Make the Session Grid a single column --- */
-        .sessions-grid {
-            grid-template-columns: 1fr; /* Force a single column layout */
-            width: 100%;
-        }
-
-        /* --- Make Day Tabs scrollable on mobile --- */
         .day-tabs {
-            justify-content: flex-start; /* Align tabs to the left */
+            justify-content: flex-start;
             padding: 0.5rem 1rem;
-            white-space: nowrap; /* Prevent tabs from wrapping */
-            overflow-x: auto; /* Allow horizontal scrolling */
+            white-space: nowrap;
+            overflow-x: auto;
         }
     }
 </style>

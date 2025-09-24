@@ -2,58 +2,58 @@
   start: "10:00"
   end: "10:25"
   duration: 25
-  row: { start: 2, end: 3 }
+  row: { start: 1, end: 2 }
 
 - key: iec_json_schema
   start: "10:25"
   end: "10:50"
   duration: 25
-  row: { start: 3, end: 4 }
+  row: { start: 2, end: 3 }
 
 - key: applying_engineeting_2_json_schema
   start: "11:10"
   end: "11:35"
   duration: 25
-  row: { start: 4, end: 5 }
+  row: { start: 3, end: 4 }
 
 - key: patterns_high_perf_json_schema
   start: "11:35"
   end: "12:00"
   duration: 25
-  row: { start: 5, end: 6 }
+  row: { start: 4, end: 5 }
 
 - key: relational_db_json_schema
   start: "12:00"
   end: "12:25"
   duration: 25
-  row: { start: 6, end: 7 }
+  row: { start: 5, end: 6 }
 
 - key: frontend_json_schema
   start: "12:25"
   end: "12:50"
   duration: 25
-  row: { start: 7, end: 8 }
+  row: { start: 6, end: 7 }
 
 - key: json_schema_strands
   start: "13:50"
   end: "14:15"
   duration: 25
-  row: { start: 8, end: 9 }
+  row: { start: 7, end: 8 }
 
 - key: webofthings_json_schema
   start: "14:15"
   end: "14:40"
   duration: 25
-  row: { start: 9, end: 10 }
+  row: { start: 8, end: 9 }
 
 - key: json_schema_4_data_design
   start: "14:40"
   end: "15:05"
   duration: 25
-  row: { start: 10, end: 11 }
+  row: { start: 9, end: 10 }
 
 - key: json_schema_finos
   start: "15:05"
   end: "15:30"
   duration: 25
-  row: { start: 11, end: 12 }
+  row: { start: 10, end: 11 }

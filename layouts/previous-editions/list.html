@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <div class="hero">
-	<h1 class="heading">JSON Schema Conference: Previous Editions</h1>
+	<h1 class="heading margin">JSON Schema Conference: Previous Editions</h1>
 </div>
 
 <section class="previous-editions-page">
@@ -20,21 +20,6 @@
 
                         {{ $path := printf "images/conferences/%d" .Params.year }}
                         {{ $fullpath := printf "static/%s" $path }}
-
-                        {{ if (fileExists $fullpath) }}
-                        <div class="conference-slider auto-slider">
-                        <div class="slider-track">
-                            {{ range readDir $fullpath }}
-                            <div class="slide">
-                            <img src="/{{ $path }}/{{ .Name }}" alt="Conference photo">
-                            </div>
-                            {{ end }}
-                        </div>
-                        </div>
-                        {{ else }}
-                        <p>No images available for {{ .Params.year }}.</p>
-                        {{ end }}
-
                         <div class="edition-button">View Edition</div>
                     </a>
                 </div>
@@ -75,7 +60,9 @@
             padding: 1rem;
         }
     }
-    
+    .margin{
+        margin-top: 15px !important;
+    }
     .editions-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -173,77 +160,9 @@
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
-    .conference-slider {
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-        margin-top: 10px;
-    }
-
-    .conference-slider .slider-track {
-        display: flex;
-        gap: 10px;
-    }
-
-    .conference-slider .slide {
-        flex-shrink: 0;          
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .conference-slider .slide img {
-        height: 150px;            
-        width: auto;              
-        object-fit: contain;
-        display: block;
-        border-radius: 6px;
-    }
-
 
 
 </style>
 
-<script>
-   document.addEventListener("DOMContentLoaded", () => {
-    const sliders = document.querySelectorAll(".conference-slider");
-
-    sliders.forEach(slider => {
-        const track = slider.querySelector(".slider-track");
-        const slides = Array.from(slider.querySelectorAll(".slide"));
-
-        // Duplicate slides for seamless loop
-        slides.forEach(s => {
-        const clone = s.cloneNode(true);
-        track.appendChild(clone);
-        });
-
-        let scrollAmount = 0;
-        const speed = 1; 
-        let paused = false;
-
-        
-        slider.addEventListener("mouseenter", () => paused = true);
-        slider.addEventListener("mouseleave", () => paused = false);
-
-        function step() {
-        if (!paused) {
-            scrollAmount += speed;
-
-            //reset scroll when first half (original slides) fully scrolled
-            const firstHalfWidth = slides.reduce((sum, s) => sum + s.offsetWidth + 10, 0);
-            if (scrollAmount >= firstHalfWidth) scrollAmount = 0;
-
-            track.style.transform = `translateX(-${scrollAmount}px)`;
-        }
-        requestAnimationFrame(step);
-        }
-
-        step();
-    });
- });
-
-
-</script>
 
 {{ end }} 

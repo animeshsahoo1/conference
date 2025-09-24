@@ -8,12 +8,11 @@
 
 <section>
     <div style="text-align: center; margin: 4rem 0; font-size: 1.5rem;">
-        <p><strong>Sponsors Coming Soon!</strong></p>
         <p>We are looking forward to announcing our amazing sponsors for JSON Schema Conference 2025.</p>
         
         <div style="margin: 2rem 0;">
             <a href="https://opencollective.com/json-schema/events/the-json-schema-conference-2025-f7f367ce" 
-               style="display: inline-block; padding: 1rem 2rem; background: #002cc4; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
+               style="display: inline-block; padding: 1rem 2rem; background: #005A9E; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
                Become a Sponsor
             </a>
         </div>
@@ -35,25 +34,25 @@
         <p>We extend our gratitude to the sponsors who supported JSON Schema Conference 2024.</p>
     </div>
 
-    {{/*ADD BELOW LINE CODE WHEN THERE ARE PLATINUM AND GOLD SPONSORS*/}}
-    {{/*  {{ if gt (len .Site.Data.sponsors.platinum.items) 0 }}
-        <div class="partners-group partner-platinum">
-        <h3 class="fancy"><span>Platinum Partners</span></h3>
+    {{ if gt (len .Site.Data.sponsors.platinum.items) 0 }}
+    <div class="partners-group partner-platinum">
+        <h3 class="fancy"><strong><span>Platinum Sponsor</span></strong></h3>
         <div class="carousel-container">
             <div class="carousel-track">
-                {{ range .Site.Data.sponsors.gold.items }}
+                {{ range .Site.Data.sponsors.platinum.items }}
                 <div class="carousel-item">
                     {{ partial "sponsor-card.html" . }}
                 </div>
                 {{ end }}
             </div>
-            </div>
         </div>
-    {{ end }}  */}}
-
+    </div>
+    {{ end }}
+    
+    {{/*ADD BELOW LINE CODE WHEN THERE ARE BRONZE AND GOLD SPONSORS*/}}
     {{/*  {{ if gt (len .Site.Data.sponsors.gold.items) 0 }}
         <div class="partners-group partner-gold">
-        <h3 class="fancy"><span>Gold Partners</span></h3>
+        <h3 class="fancy"><span>Gold Sponsor</span></h3>
         <div class="carousel-container">
             <div class="carousel-track">
                 {{ range .Site.Data.sponsors.gold.items }}
@@ -66,9 +65,9 @@
         </div>
     {{ end }}  */}}
 
-    {{ if gt (len .Site.Data.sponsors.bronze.items) 0 }}
+    {{/*  {{ if gt (len .Site.Data.sponsors.bronze.items) 0 }}
         <div class="partners-group partner-bronze">
-        <h3 class="fancy"><span>Bronze Partners</span></h3>
+        <h3 class="fancy"><span>Bronze Sponsor</span></h3>
         <div class="carousel-container">
             <div class="carousel-track">
                 {{ range .Site.Data.sponsors.bronze.items }}
@@ -79,7 +78,7 @@
             </div>
             </div>
         </div>
-    {{ end }}
+    {{ end }}  */}}
 
 
 

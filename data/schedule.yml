@@ -4,8 +4,6 @@
   rooms:
     - room: main
       slots:
-        - slot: welcome
-          talk: opening
         - slot: state_of_json_schema
           talk: state_of_json_schema
         - slot: iec_json_schema

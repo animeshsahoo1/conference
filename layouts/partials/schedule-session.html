@@ -1,7 +1,5 @@
 {{ $session := .sessionPage }}
 {{ $room := .roomData }}
-{{ $session := .sessionPage }}
-{{ $room := .roomData }}
 
 {{/* --- Fetch speaker data from the session's own front matter --- */}}
 {{ $speakerPhotoURL := "" }}
@@ -16,7 +14,7 @@
     {{ $speakerPhotoURL = . }}
   {{ end }}
 {{ end }}
-{{/* Use a default image if no photo is found */}}
+
 {{ $speakerPhotoURL = $speakerPhotoURL | default "/images/default-session-image.png" }}
 
 
@@ -52,7 +50,9 @@
 .session-link-wrapper {
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
+  /* MODIFIED: Ensure the link wrapper fills the grid cell height */
+  height: 250px;
 }
 
 /* Main Session Card styling */
@@ -62,12 +62,17 @@
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  /* REMOVED height: 100% to allow cards to fit their content */
+  /* MODIFIED: Set a fixed height to ensure all cards are uniform */
+  height: 100%;
+  width: 100%; /* Ensure card fills the link wrapper */
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* MODIFIED: Align content to the start instead of centering the whole block */
+  justify-content: flex-start;
   position: relative;
-  
+  /* MODIFIED: Use padding for consistent internal spacing */
+  padding: 1.5rem;
+  box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
 }
 
 .session-card::after{
@@ -80,29 +85,35 @@
     width: 10px;
 }
 
-.session-link-wrapper:hover {
+/* MODIFIED: Apply hover effects to the card, not the wrapper */
+.session-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
 /* Image container */
 .card-img {
-  height: auto;
-  width: 150px;
+  height: 120px; /* MODIFIED: Set a fixed height */
+  width: 120px; /* MODIFIED: Set a fixed width */
   border-radius: 50%;
   transition: transform 0.4s ease;
-  margin-left: 100px;
+  /* MODIFIED: Removed the large margin that caused the spacing issue */
+  margin-right: 1.5rem; /* Add space between image and text */
+  flex-shrink: 0; /* Prevents image from shrinking */
+  object-fit: cover; /* Ensures image covers the area without distortion */
 }
 
 .session-card:hover .card-img {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /* Info container */
 .session-card .info {
-  padding: 1.25rem;
-  text-align: center;
-  flex-grow: 1; 
+  /* MODIFIED: Removed padding as it's now on the parent .session-card */
+  padding: 0;
+  /* MODIFIED: Align text to the left */
+  text-align: left;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
@@ -133,6 +144,7 @@
 
 .room-and-tags {
   padding-top: 1rem;
+  margin-top: auto; /* Pushes tags to the bottom of the card */
 }
 
 .session-room {
@@ -144,7 +156,8 @@
 .session-meta {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* MODIFIED: Justify content to the start */
+  justify-content: flex-start;
   gap: 0.5rem;
   margin-top: 0.75rem;
 }
@@ -158,14 +171,4 @@
   font-weight: 500;
 }
 
-/* Special styling for breaks/lunch */
-.format-break .card-img, .format-lunch .card-img {
-    background-image: none !important;
-    background-color: #f0f8ff;
-}
-.format-break, .format-lunch {
-    justify-content: center;
-    align-items: center;
-    background-color: #fafcff;
-}
 </style>
