@@ -1,5 +1,9 @@
 {{ define "main" }}
 
+<div class="hero">
+    <h1 class="heading marginTop">Schedule</h1>
+</div>
+
 <main class="schedule-container">
     {{ .Content }}
 
@@ -67,6 +71,9 @@
         margin: 0;
         padding: 0;
     }
+    .marginTop{
+        margin-top: -55px !important;
+    }
     .schedule-container {
         max-width: 1200px;
         margin: 0 auto;
@@ -132,8 +139,8 @@
         font-weight: 600;
         color: var(--time-color);
         width: 90%;
-        margin-bottom: 1.5rem; /* Space between time and session cards */
-        padding-bottom: 1rem;
+        margin-bottom: 1.3rem; /* Space between time and session cards */
+        padding-bottom: 0.5rem;
         border-bottom: 2px solid var(--border-color); /* Add a separator line */
     }
 
@@ -169,7 +176,7 @@
         text-transform: capitalize;
     }
 
-	@media (max-width: 768px) {
+	@media (max-width: 480px) {
         .schedule-header h1 {
             font-size: 2.2rem;
         }
@@ -187,6 +194,16 @@
             padding: 0.5rem 1rem;
             white-space: nowrap;
             overflow-x: auto;
+        }
+        .time-marker {
+            /* Style the time as a full-width header for the slot */
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--time-color);
+            width: 90%;
+            margin-bottom: 1rem; /* Space between time and session cards */
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid var(--border-color); /* Add a separator line */
         }
     }
 </style>
